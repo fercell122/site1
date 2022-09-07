@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Antic Didone';
+    src: local('Antic Didone'), url(../../fonts/AnticDidone-Regular.ttf) format('truetype');
+    font-family: 'Hind';
+    src: local('Hind'), url(../../fonts/hind-regular.otf) format('truetype');
+}
+
+a {
+    text-decoration: none;
+
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    width: 500px;
+    height: 10px;
+    top: calc(50% - 40px/2 - 240px);
+    font-family: 'Antic Didone';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 57px;
+    text-align: center;
+    color: #000000;
+
+}
+
+.subtitle {
+
+    width: 335px;
+    height: 40px;
+    left: 553px;
+    top: calc(50% - 40px/2 - 175px);
+
+    font-family: 'Antic Didone';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 43px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.directions {
+    margin: 5px;
+    width: 335px;
+    height: 23px;
+    top: calc(50% - 40px/2 - 73px);
+    font-family: 'Hind';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 10px;
+    text-align: center;
+    color: #000000;
+}
+
+#menu_section{
+    margin: 20px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .title {
+        width: 500px;
+        height: 40px;
+        top: calc(50% - 40px/2 - 240px);
+        font-family: 'Antic Didone';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 57px;
+        text-align: center;
+        color: #000000;
+
+    }
+
+    .subtitle {
+
+        width: 335px;
+        height: 40px;
+        left: 553px;
+        top: calc(50% - 40px/2 - 175px);
+
+        font-family: 'Antic Didone';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 43px;
+        text-align: center;
+
+        color: #000000;
+    }
+
+    .directions {
+        margin: 16px;
+        width: 335px;
+        height: 23px;
+        top: calc(50% - 40px/2 - 73px);
+        font-family: 'Hind';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 10px;
+        text-align: center;
+        color: #000000;
+    }
+
+    #menu_section {
+        margin: 20px;
+    }
+
+}

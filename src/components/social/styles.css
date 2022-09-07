@@ -1,0 +1,13 @@
+#instagram{
+    display: inline-flex;
+    width:20px;
+    height:20px;
+    margin: 10px;
+}
+
+#linkedin{
+    width:20px;
+    height:20px;
+    margin: 10px;
+    display: inline-flex;
+}

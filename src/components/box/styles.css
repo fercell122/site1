@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Hind';
+    src: local('Hind'), url(../../fonts/hind-regular.otf) format('truetype');
+}
+
+
+#Boxtipo {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 250px;
+}
+
+#Boxtipo h2 {
+    font-family: 'Hind';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 31px;
+
+}
+
+@media only screen and (max-width: 600px) {
+    #Boxtipo {
+        display: flex;
+        margin-top: 20px;
+        margin-left: auto;
+    }
+}

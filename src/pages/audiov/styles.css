@@ -1,0 +1,18 @@
+    #tvideo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Hind';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 51px;
+    
+
+    }
+
+    #video{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
