@@ -38,7 +38,7 @@ export default function Contato() {
             <main id="inicio">
                 <div id="info">
                     <p>isabelagbarreiros@gmail.com</p>
-                    <p>991391578</p>
+                    <p>(12) 99139-1578</p>
                     <Social />
                 </div>
                 <div id="contact">

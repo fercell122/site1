@@ -1,18 +1,40 @@
-    #tvideo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Hind';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 22px;
-    line-height: 51px;
-    
-
-    }
-
-    #video{
+    #tvideo {
         display: flex;
         align-items: center;
         justify-content: center;
+        font-family: 'Hind';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 51px;
+    }
+
+    #tdescription {
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    #tdescription p {
+        
+        width:50%
+
+    }
+
+    #video {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media only screen and (max-width: 700px) {
+        #tdescription {  
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #tdescription p {  
+            width: 100%;
+        }
     }

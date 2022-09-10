@@ -65,15 +65,16 @@ a {
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     .title {
+        margin-top: 50px;
         width: 500px;
-        height: 40px;
+        height: 10px;
         top: calc(50% - 40px/2 - 240px);
         font-family: 'Antic Didone';
         font-style: normal;
         font-weight: 400;
-        font-size: 48px;
+        font-size: 30px;
         line-height: 57px;
         text-align: center;
         color: #000000;
@@ -90,7 +91,7 @@ a {
         font-family: 'Antic Didone';
         font-style: normal;
         font-weight: 400;
-        font-size: 36px;
+        font-size: 29px;
         line-height: 43px;
         text-align: center;
 
@@ -98,14 +99,14 @@ a {
     }
 
     .directions {
-        margin: 16px;
+        margin: 13px;
         width: 335px;
         height: 23px;
         top: calc(50% - 40px/2 - 73px);
         font-family: 'Hind';
         font-style: normal;
         font-weight: 400;
-        font-size: 32px;
+        font-size: 25px;
         line-height: 10px;
         text-align: center;
         color: #000000;
