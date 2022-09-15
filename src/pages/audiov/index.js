@@ -22,7 +22,7 @@ export default function Audiovisual() {
             </h1>
             <div id="tdescription">
                 <p >Projeto de TCC na Faculdade Cásper Líbero
-                    de uma série documental que aborda as
+                    de uma série documental<br/> que aborda as
                     mudanças sofridas pela música brasileira
                     com a era digital.</p>
             </div>
