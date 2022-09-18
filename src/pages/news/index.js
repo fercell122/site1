@@ -28,8 +28,15 @@ export default function News() {
 
         fetch()
     }, [news])
-    const aventuras = news.filter(hardnew => hardnew.company === "Aventuras")
-    const uol = news.filter(hardnew => hardnew.company === "uol")
+
+    function ordemDecrescente(a, b) {
+        return a.data < b.data;
+    }
+
+    const news2 = news.sort(ordemDecrescente);
+
+    const aventuras = news2.filter(hardnew => hardnew.company === "Aventuras")
+    const uol = news2.filter(hardnew => hardnew.company === "uol")
     return (
         <>
             {!loader ? (<body>

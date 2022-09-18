@@ -9,7 +9,6 @@ import "../../components/loader/style.css"
 export default function Webstories() {
     const [webS, setWebS] = useState([])
     const [loader, setLoader] = useState(undefined)
-    const Loading = <h1>Waiting</h1>
     useEffect(() => {
         async function fetch() {
             const REALM_APP_ID = "application-0-zmyli";
@@ -28,6 +27,28 @@ export default function Webstories() {
         fetch()
     }, [webS])
 
+    function ordemDecrescente(a, b) {
+
+        return b.data - a.data;
+    }
+
+    const webstories = webS.map((item) => {
+        const dia = item.data.slice(0, 2);
+        const mes = item.data.slice(3, 5);
+        const ano = item.data.slice(6, 10);
+        const x = mes + "/" + dia + "/" + ano;
+        const formated = new Date(x);
+        return ({
+            titulo: item.title,
+            data: formated,
+            link: item.link,
+            company: item.company
+        })
+    });
+
+    const ordenado = webstories.sort(ordemDecrescente)
+
+    //console.log(ordenado)
 
 
     return (
@@ -43,13 +64,14 @@ export default function Webstories() {
                 <div>
                     <Menu />
                     <Boxtipo titulo="Aventuras na História" />
-                    {webS &&
-                        webS.map((item) => {
+                    {ordenado &&
+                        ordenado.map((item) => {
+                            let dataFormatada = ((item.data.getDate())) + "/" + ((item.data.getMonth() + 1)) + "/" + item.data.getFullYear();
                             return <Unit
                                 key={item.id}
                                 src={item.link}
-                                title={item.title}
-                                data={item.data}
+                                title={item.titulo}
+                                data={dataFormatada}
                             />;
                         })
                     }
