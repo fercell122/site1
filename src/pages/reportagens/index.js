@@ -29,12 +29,35 @@ export default function Report() {
         fetch()
     }, [reports])
 
-    const recreio = reports.filter(report => report.company === "Recreio")
-    const aventuras = reports.filter(report => report.company === "Aventuras")
 
+    function ordemDecrescente(a, b) {
+
+        return b.data - a.data;
+    }
+
+    const reportagens = reports.map((item) => {
+        const dia = item.data.slice(0, 2);
+        const mes = item.data.slice(3, 5);
+        const ano = item.data.slice(6, 10);
+        const x = mes + "/" + dia + "/" + ano;
+        const formated = new Date(x);
+        return ({
+            title: item.title,
+            data: formated,
+            link: item.link,
+            company: item.company
+        })
+    });
+
+    const ordenado = reportagens.sort(ordemDecrescente)
+
+    const recreio = ordenado.filter(report => report.company === "Recreio")
+    const aventuras = ordenado.filter(report => report.company === "Aventuras")
+
+   
     return (
         <>
-            {!loader ? (<body>
+           {!loader ? (<body>
                 <main class="loading-container">
                     <p class="spinner-text">
                         loading...
@@ -48,28 +71,30 @@ export default function Report() {
                     <Boxtipo titulo="Revista Recreio" />
                     {recreio &&
                         recreio.map((item) => {
+                            let dataFormatada = ((item.data.getDate())) + "/" + ((item.data.getMonth() + 1)) + "/" + item.data.getFullYear();
                             return <Unit
                                 key={item.id}
                                 src={item.link}
                                 title={item.title}
-                                data={item.data}
+                                data={dataFormatada}
                             />;
                         })
                     }
                     <Boxtipo titulo="Aventuras na História" />
                     {aventuras &&
                         aventuras.map((item) => {
+                            let dataFormatada = ((item.data.getDate())) + "/" + ((item.data.getMonth() + 1)) + "/" + item.data.getFullYear();
                             return <Unit
                                 key={item.id}
                                 src={item.link}
                                 title={item.title}
-                                data={item.data}
+                                data={dataFormatada}
                             />;
                         })
                     }
 
                 </div>
-            }
+            } 
         </>
     )
 }

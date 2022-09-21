@@ -30,13 +30,27 @@ export default function News() {
     }, [news])
 
     function ordemDecrescente(a, b) {
-        return a.data < b.data;
+        return b.data - a.data;
     }
 
-    const news2 = news.sort(ordemDecrescente);
+    const noticias = news.map((item) => {
+        const dia = item.data.slice(0, 2);
+        const mes = item.data.slice(3, 5);
+        const ano = item.data.slice(6, 10);
+        const x = mes + "/" + dia + "/" + ano;
+        const formated = new Date(x);
+        return ({
+            title: item.title,
+            data: formated,
+            link: item.link,
+            company: item.company
+        })
+    });
 
-    const aventuras = news2.filter(hardnew => hardnew.company === "Aventuras")
-    const uol = news2.filter(hardnew => hardnew.company === "uol")
+    const ordenado = noticias.sort(ordemDecrescente);
+
+    const aventuras = ordenado.filter(hardnew => hardnew.company === "Aventuras")
+    const uol = ordenado.filter(hardnew => hardnew.company === "uol")
     return (
         <>
             {!loader ? (<body>
@@ -53,22 +67,24 @@ export default function News() {
                     <Boxtipo titulo="UOL" />
                     {uol &&
                         uol.map((item) => {
+                            let dataFormatada = ((item.data.getDate())) + "/" + ((item.data.getMonth() + 1)) + "/" + item.data.getFullYear();
                             return <Unit
                                 key={item.id}
                                 src={item.link}
                                 title={item.title}
-                                data={item.data}
+                                data={dataFormatada}
                             />;
                         })
                     }
                     <Boxtipo titulo="Aventuras na História" />
                     {aventuras &&
                         aventuras.map((item) => {
+                            let dataFormatada = ((item.data.getDate())) + "/" + ((item.data.getMonth() + 1)) + "/" + item.data.getFullYear();
                             return <Unit
                                 key={item.id}
                                 src={item.link}
                                 title={item.title}
-                                data={item.data}
+                                data={dataFormatada}
                             />;
                         })
 

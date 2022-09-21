@@ -1,0 +1,42 @@
+    #tvideo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Hind';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 51px;
+    }
+
+    #tdescription {
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 280px;
+
+    }
+    #tdescription p {
+        
+        width:70%
+
+    }
+
+    #video {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media only screen and (max-width: 700px) {
+        #tdescription {  
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+        }   
+        #tdescription p {  
+            width: 100%;
+        }
+    }

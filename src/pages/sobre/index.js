@@ -7,10 +7,7 @@ export default function Sobre() {
         <div>
             <Menu />
             <div id="bloco" >
-                <h3 id="sobre">Isabela Barreiros é jornalista formada pela Faculdade Cásper Líbero.
-                Tem passagem na redação do portal Aventuras na História e textos publicados
-                no UOL e revista Recreio, onde apresenta o quadro “K-Stories”,
-                cobrindo os lançamentos do k-pop e entrevistando figuras desse universo.
+                <h3 id="sobre">Isabela Barreiros é jornalista formada pela Faculdade Cásper Líbero. Tem passagem pela redação do portal Aventuras na História e textos publicados no UOL e revista Recreio, onde apresentou o quadro “K-Stories”, cobrindo os lançamentos do k-pop e entrevistando figuras desse universo. Atualmente, é produtora de conteúdo no site Guia da Cozinha.
             </h3>
         </div>
         </div >

@@ -39,6 +39,11 @@ export default function Landing() {
                     </Link>
                 </div>
                 <div className="box">
+                    <Link to="/midia_impressa">
+                        <h1 className="directions">mídia impressa</h1>
+                    </Link>
+                </div>
+                <div className="box">
                     <Link to="/sobre">
                         <h1 className="directions">sobre</h1>
                     </Link>
