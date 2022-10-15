@@ -53,7 +53,7 @@ export default function Report() {
 
     const recreio = ordenado.filter(report => report.company === "Recreio")
     const aventuras = ordenado.filter(report => report.company === "Aventuras")
-
+    const guia_cozinha = ordenado.filter(report => report.company === "Cozinha")
    
     return (
         <>
@@ -83,6 +83,18 @@ export default function Report() {
                     <Boxtipo titulo="Aventuras na História" />
                     {aventuras &&
                         aventuras.map((item) => {
+                            let dataFormatada = ((item.data.getDate())) + "/" + ((item.data.getMonth() + 1)) + "/" + item.data.getFullYear();
+                            return <Unit
+                                key={item.id}
+                                src={item.link}
+                                title={item.title}
+                                data={dataFormatada}
+                            />;
+                        })
+                    }
+                    <Boxtipo titulo="Guia da Cozinha" />
+                    {guia_cozinha &&
+                        guia_cozinha.map((item) => {
                             let dataFormatada = ((item.data.getDate())) + "/" + ((item.data.getMonth() + 1)) + "/" + item.data.getFullYear();
                             return <Unit
                                 key={item.id}
