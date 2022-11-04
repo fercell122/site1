@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Menu from "../../components/menu/index";
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import pdf from "./revista.pdf";
-import pdf2 from "./revista2.pdf";
+import pdf2 from "./Aventuras.pdf";
 import Boxtipo from "../../components/box/index";
 import "../../components/loader/style.css"
 //import "./styles.css";
@@ -50,10 +50,10 @@ export default function Mídia() {
                 marginRight: '50px'
             }}>
                 <Document file={pdf2} onLoadSuccess={onDocumentLoadSuccess}>
-                    <Page pageNumber={16} />
+                    <Page pageNumber={1} />
                 </Document>
                 <Document file={pdf2} onLoadSuccess={onDocumentLoadSuccess}>
-                    <Page pageNumber={17} />
+                    <Page pageNumber={2} />
                 </Document>
             </div>
 
