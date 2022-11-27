@@ -27,7 +27,7 @@ export default function News() {
 
 
         fetch()
-    }, [news])
+    }, [])
 
     function ordemDecrescente(a, b) {
         return b.data - a.data;

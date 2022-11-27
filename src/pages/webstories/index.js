@@ -25,7 +25,7 @@ export default function Webstories() {
             }
         }
         fetch()
-    }, [webS])
+    }, [])
 
     function ordemDecrescente(a, b) {
 
